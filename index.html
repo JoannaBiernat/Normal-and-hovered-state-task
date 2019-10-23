@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Square</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .wrap {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        top: 50px;
+        left: 50px;
+      }
+
+      .wrap div {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background-color: #eee;
+        border: 2px solid brown;
+      }
+
+      .wrap div:nth-child(1) {
+        z-index: 1;
+      }
+
+      .wrap div:nth-child(2) {
+        z-index: 0;
+        top: 10px;
+        left: 10px;
+      }
+
+      .wrap div:nth-child(3) {
+        z-index: -1;
+        top: 20px;
+        left: 20px;
+      }
+
+      .first h1 {
+        position: absolute;
+        color: brown;
+      }
+
+      .first h1:nth-child(1) {
+        top: 30px;
+        left: 20px;
+      }
+      .first h1:nth-child(2) {
+        top: 60px;
+        left: 20px;
+      }
+
+      .first h1:nth-child(3) {
+        bottom: 20px;
+        left: 20px;
+        font-size: 14px;
+        color: black;
+      }
+
+      .wrap:hover .first {
+        background-color: brown;
+      }
+
+      .wrap:hover .first h1 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="first">
+        <h1>Project Group</h1>
+        <h1>Name</h1>
+        <h1>6 projects</h1>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>
